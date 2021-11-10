@@ -18,13 +18,13 @@ class MyApp extends StatelessWidget {
             title: const Text('Flutter Demo'),
           ),
           body: Column(
-            children: [
-              const Text('The question'),
-              const ElevatedButton(
+            children: const [
+              Text('The question'),
+              ElevatedButton(
                 child: Text('Answer 1'),
                 onPressed: null,
               ),
-              const ElevatedButton(child: Text('Answer 2'), onPressed: null),
+              ElevatedButton(child: Text('Answer 2'), onPressed: null),
             ],
           )),
     );
