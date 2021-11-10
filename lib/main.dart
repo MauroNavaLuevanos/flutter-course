@@ -7,26 +7,32 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var questions = [
-      'What\'s your favorite color?',
-      'What\'s your favorite animal?',
-    ];
+    void answerQuestion() {
+      // ignore: avoid_print
+      print('Answer chosen!');
+    }
 
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: const Text('Flutter Demo'),
-          ),
-          body: Column(
-            children: const [
-              Text('The question'),
-              ElevatedButton(
-                child: Text('Answer 1'),
-                onPressed: null,
-              ),
-              ElevatedButton(child: Text('Answer 2'), onPressed: null),
-            ],
-          )),
+        appBar: AppBar(
+          title: const Text('Flutter Demo'),
+        ),
+        body: Column(
+          children: [
+            const Text('The question'),
+            ElevatedButton(
+              child: const Text('Answer 1'),
+              onPressed: answerQuestion,
+            ),
+            ElevatedButton(
+              child: const Text('Answer 2'),
+              onPressed: () {
+                print('answer chosen!!!');
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
